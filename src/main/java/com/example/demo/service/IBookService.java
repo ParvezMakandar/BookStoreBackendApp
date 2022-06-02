@@ -1,0 +1,25 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.BookDTO;
+import com.example.demo.model.Book;
+
+import java.util.List;
+
+public interface IBookService {
+    Book createBook(BookDTO bookDTO);
+
+    Book getBookDataById(int BookId);
+
+    List<Book> getAllBookData();
+    Book updateRecordById(Integer BookId, BookDTO bookDTO);
+    List<Book> getBookByName(String bookName);
+
+    List<Book> sortedListOfBooksInAscendingOrder();
+
+    List<Book> sortedListOfBooksInDescendingOrder();
+
+    Book updateQuantity(Integer id, Integer quantity);
+
+    //this is the method for deleting the Record By Token
+    Object deleteRecordByToken(int BookId);
+}
